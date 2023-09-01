@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args)
@@ -25,6 +22,36 @@ public class Main {
 
         System.out.println(apo.find("asd"));
         apo.printMedikamente();
+
+        System.out.println("-----------");
+
+
+
+        Set<Integer> dustin = new HashSet<>();
+        dustin.add(3);
+        dustin.add(11);
+        dustin.add(2);
+
+        Set<Integer> ming = new HashSet<>();
+        ming.add(2);
+        ming.add(5);
+        ming.add(9);
+
+        Set<Integer> diana = new HashSet<>();
+        diana.add(1);
+        diana.add(11);
+        diana.add(111);
+
+
+        System.out.println(dustin);
+        dustin.removeAll(diana);
+
+      //  System.out.println(dustin.addAll(ming));
+
+        System.out.println(dustin);
+        System.out.println(diana);
+        dustin.addAll(ming);
+        System.out.println(dustin);
 
     }
 }

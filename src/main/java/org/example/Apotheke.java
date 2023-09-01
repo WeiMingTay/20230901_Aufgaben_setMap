@@ -90,10 +90,22 @@ public class Apotheke
         this.inventory = inventory;
     }
 
-    public void printMedikamente(){
+    public void printMedikamente()
+    {
+        //inventory.forEach((item, key) -> System.out.println(item));
         for(Medicine item : inventory.values()){
             System.out.println(item);
         }
+    }
+
+    public List<Medicine> getAvailableMeds3()
+    {
+        List<Medicine> result = inventory
+                                    .values()
+                                    .stream()
+                                    .filter(item -> item.getAvailability() == true)
+                                    .collect(Collectors.toList());
+        return result;
     }
 }
 
